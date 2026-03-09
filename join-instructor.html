@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Join as an Instructor</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: "Poppins", Arial, sans-serif;
+      background: #0A1A2F;
+      color: #E0E0E0;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 50px 20px 30px;
+    }
+
+    .hero h1 {
+      font-size: 36px;
+      color: #00C4CC;
+      margin: 0 0 10px;
+    }
+
+    .hero p {
+      font-size: 16px;
+      color: #B0B0B0;
+    }
+
+    .form-card {
+      width: 90%;
+      max-width: 550px;
+      margin: 0 auto 50px;
+      background: #1F2C47;
+      padding: 30px;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.3);
+    }
+
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: 500;
+      font-size: 14px;
+      color: #E0E0E0;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      padding: 12px;
+      margin-top: 6px;
+      border: 1px solid #3A4A6B;
+      border-radius: 6px;
+      outline: none;
+      font-size: 14px;
+      background: #0A1A2F;
+      color: #E0E0E0;
+      transition: border 0.2s;
+    }
+
+    input:focus, select:focus, textarea:focus {
+      border-color: #00C4CC;
+    }
+
+    input::placeholder, textarea::placeholder {
+      color: #B0B0B0;
+    }
+
+    textarea {
+      min-height: 100px;
+      resize: vertical;
+    }
+
+    .btn {
+      width: 100%;
+      margin-top: 20px;
+      padding: 14px;
+      background: #00C4CC;
+      border: none;
+      font-size: 16px;
+      font-weight: 500;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background 0.3s;
+      color: #0A1A2F;
+    }
+
+    .btn:hover {
+      background: #00A3B3;
+    }
+
+    .small-text {
+      font-size: 12px;
+      color: #B0B0B0;
+    }
+
+    .terms {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: 15px;
+      font-size: 13px;
+      color: #B0B0B0;
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 28px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="hero">
+    <h1>Join as an Instructor</h1>
+    <p>Share your skills and teach students online professionally.</p>
+  </div>
+
+  <div class="form-card">
+    <form action="#" method="POST" enctype="multipart/form-data">
+
+      <label for="fullname">Full Name</label>
+      <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required>
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+      <label for="phone">Phone Number</label>
+      <input type="tel" id="phone" name="phone" placeholder="Enter your phone number" pattern="[0-9]{10,15}" required>
+      <span class="small-text">Enter a valid phone number (10-15 digits)</span>
+
+      <label for="course">Which Course Do You Want to Teach?</label>
+      <select id="course" name="course" required>
+        <option value="">Select Course</option>
+        <option>Web Development</option>
+        <option>UI/UX Design</option>
+        <option>Digital Marketing</option>
+        <option>SEO</option>
+        <option>Graphic Design</option>
+        <option>Other</option>
+      </select>
+
+      <label for="experience">Your Experience</label>
+      <textarea id="experience" name="experience" placeholder="Describe your teaching or industry experience" required></textarea>
+
+      <label for="details">Additional Details</label>
+      <textarea id="details" name="details" placeholder="Any message you want to share"></textarea>
+
+      <label for="resume">Upload Resume / Portfolio</label>
+      <input type="file" id="resume" name="resume" accept=".pdf,.doc,.docx,.zip,.rar">
+
+      <label for="portfolio">LinkedIn / Portfolio Link</label>
+      <input type="url" id="portfolio" name="portfolio" placeholder="https://example.com">
+
+      <div class="terms">
+        <input type="checkbox" id="terms" name="terms" required>
+        <label for="terms">I agree to the terms and conditions of teaching on this platform.</label>
+      </div>
+
+      <button class="btn" type="submit">Submit</button>
+
+    </form>
+  </div>
+
+</body>
+</html>
